@@ -1,0 +1,183 @@
+body {
+    font-family: "Press Start 2P", sans-serif;
+    background-image: url("../imagens/background.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: scrollBackground 10s linear infinite;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(3px);
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 0;
+        /* Começa no início */
+    }
+
+    100% {
+        background-position: -1000px 0;
+        /* Move para a esquerda */
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.mariocards {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-mario {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 10px 30px 0px;
+}
+
+.cartao-mario:hover {
+    background-color: #FFD700;
+    transition: background-color 0.3s ease;
+}
+
+.cartao-mario.aberto {
+    display: block;
+}
+
+.cartao-mario img {
+    width: 100%;
+    height: 100%;
+    margin-top: 14px;
+}
+
+.cartao-mario .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-mario .nome {
+    margin-bottom: 8px;
+}
+
+.cartao-mario .tipo {
+    background-color: #fff;
+    font-size: 11px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+.cartao-mario .detalhes {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-mario .cartao-informacoes {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #FFB300
+}
+
+.cartao-mario .cartao-informacoes h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fced68;
+}
+
+.cartao-mario .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 13.5px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+/* Customização da barra de rolagem */
+
+/*Scrollbar - O fundo da barra de rolagem*/
+.cartao-mario .cartao-informacoes .descricao::-webkit-scrollbar {
+    background-color: #C72A29;
+    width: 10px;
+    border-radius: 10px;
+}
+
+/*Thumb - A parte que pode ser arrastada*/
+.cartao-mario .cartao-informacoes .descricao::-webkit-scrollbar-thumb {
+    background-color: #FFD700;
+    border-radius: 10px;
+}
+
+.tipo-heroico {
+    background-color: #ff4b2b;
+}
+
+.tipo-animal {
+    background-color: #74c947;
+}
+
+.tipo-item {
+    background-color: #f4c542;
+}
+
+.tipo-vilao {
+    background-color: #8b0000;
+}
+
+.tipo-criatura {
+    background-color: #6b727a;
+}
+
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .mariocard img {
+    width: 25%;
+}
+
+.listagem .mariocard {
+    background-color: #1976D2;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+    transition: 0.15s ease-in-out;
+}
+
+.listagem .mariocard:hover {
+    transform: scale(1.08);
+}
+
+.listagem .mariocard span {
+    padding-right: 20px;
+}
+
+.listagem .mariocard.ativo {
+    background-color: #fa6668;
+}
