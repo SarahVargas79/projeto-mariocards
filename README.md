@@ -2,11 +2,10 @@ Salve, aventureiros do código!
 
 ##  Mario Cards: Sua aventura épica começa aqui! 
 
-![Mario comemorando] <blockquote class="imgur-embed-pub" lang="en" data-id="a/tUTcwKw" data-context="false" ><a href="//imgur.com/a/tUTcwKw"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+!Mario comemorando
+<img src="/src/imagens/mariocomemorando.jpg">
 
 **Prepare-se para viver grandes aventuras com os seus personagens favoritos do universo Mario!**
-
-... (resto do seu README)
 
 O que é esse projeto?
 
