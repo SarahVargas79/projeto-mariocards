@@ -2,7 +2,6 @@ Salve, aventureiros do código!
 
 ##  Mario Cards: Sua aventura épica começa aqui! 
 
-!Mario comemorando
 <img src="/src/imagens/mariocomemorando.jpg">
 
 **Prepare-se para viver grandes aventuras com os seus personagens favoritos do universo Mario!**
