@@ -31,9 +31,45 @@ body::before {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* Alinha os elementos na vertical */
+    justify-content: flex-start;
+    /* Garante que o conteúdo fique no topo */
     align-items: center;
     min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 42px;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+    margin-top: 100px;
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+    letter-spacing: 2px;
+    border: 3px solid #FFD700;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #00000080;
+    /* Fundo semitransparente */
+    max-width: 100%;
+    animation: pulsar 1.5s infinite;
+}
+
+/* Animação pulsante */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .mariocards {
@@ -45,13 +81,18 @@ main {
 .cartao-mario {
     display: none;
     max-width: 360px;
-    border-radius: 10px;
-    box-shadow: rgba(100, 100, 111, 0.4) 0px 10px 30px 0px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15), -8px -8px 15px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    /* Borda com cor vibrante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cartao-mario:hover {
     background-color: #FFD700;
     transition: background-color 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2), -12px -12px 20px rgba(255, 255, 255, 0.8);
 }
 
 .cartao-mario.aberto {
@@ -152,10 +193,11 @@ main {
 
 .listagem .mariocard img {
     width: 25%;
+
 }
 
 .listagem .mariocard {
-    background-color: #1976D2;
+    background-color: #1E88E5;
     font-size: 14px;
     color: #fff;
     display: flex;
@@ -167,15 +209,22 @@ main {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     min-height: 70px;
-    transition: 0.15s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    /* Transições suaves */
 }
 
 .listagem .mariocard:hover {
-    transform: scale(1.08);
+    transform: translateY(-6px);
+    /* Efeito de levantar o card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    background-color: #1565C0;
 }
 
 .listagem .mariocard span {
     padding-right: 20px;
+    color: #FFEB3B;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .listagem .mariocard.ativo {
